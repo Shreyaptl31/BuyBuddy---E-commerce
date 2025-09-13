@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyBuddy-Login/Register</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(-45deg, #1e3c72, #2a5298, #25637d, #203a43);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .auth-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        border-radius: 20px;
+        padding: 40px 30px;
+        max-width: 400px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .form {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      .form.active {
+        display: block;
+      }
+
+      .form-floating > .form-control {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        border: none;
+      }
+
+      .form-floating > .form-control::placeholder {
+        color: #ccc;
+      }
+
+      .form-floating > label {
+        color: #eee;
+      }
+
+      .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #fff;
+      }
+
+      .btn {
+        border-radius: 12px;
+        font-weight: 600;
+      }
+
+      a {
+        color: #a7e2ff;
+      }
+
+      a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      h3 {
+        color: #ffffff;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="auth-card">
+        <!-- Login Form -->
+        <form id="loginForm" class="form active">
+          <h3 class="text-center mb-4">Welcome Back</h3>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="loginEmail"
+              placeholder="Email"
+              required
+            />
+            <label for="loginEmail">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input
+              type="password"
+              class="form-control"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+            <label for="loginPassword">Password</label>
+          </div>
+          <button type="submit" class="btn btn-light w-100 mb-3">Login</button>
+          <p class="text-center">
+            Don't have an account? <a href="#" id="showRegister">Register</a>
+          </p>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="form">
+          <h3 class="text-center mb-4">Create Account</h3>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="regName"
+              placeholder="Name"
+              required
+            />
+            <label for="regName">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="regEmail"
+              placeholder="Email"
+              required
+            />
+            <label for="regEmail">Email address</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input
+              type="password"
+              class="form-control"
+              id="regPassword"
+              placeholder="Password"
+              required
+            />
+            <label for="regPassword">Password</label>
+          </div>
+          <button type="submit" class="btn btn-light w-100 mb-3">
+            Register
+          </button>
+          <p class="text-center">
+            Already have an account? <a href="#" id="showLogin">Login</a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <!-- Bootstrap JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

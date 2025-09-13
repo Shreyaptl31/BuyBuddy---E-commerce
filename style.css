@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cta {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #0b5ed7;
+}
+
+.section-title {
+    color: #343a40;
+    font-weight: 700;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.card-title {
+    font-size: 1rem;
+    color: #0d6efd;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
+
+.price {
+    color: #28a745;
+    font-size: 1.1rem;
+}
+
+.card-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.modalImage {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.card-img-top {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.cart-item {
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+      }
